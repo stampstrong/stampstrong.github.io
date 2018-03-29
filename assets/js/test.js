@@ -1,6 +1,6 @@
 ///var DateRestore1 = $("#DateRestore1").Date();
 function writeUserData(DateOutage,DateRestore1,EquipWork,wheather,status,cause,cause_detail){//,x_coord,y_coord){//, EquipWork, EventID,cause,cause_detail,status,wheather,x_coord,y_coord) {
-  firebase.database().ref('OutageCause/' + String(Math.floor(Math.random()*10))).set({
+  firebase.database().ref('OutageCause/' + String(Math.floor(Math.random()*1000))).set({
     DateRestore1: DateRestore1,
     DateOutage: DateOutage,
     EquipWork: EquipWork,
