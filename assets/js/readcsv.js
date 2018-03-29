@@ -20,7 +20,7 @@ function processData(allText) {
          console.log(headers.length)
          console.log(data[1])
          if (data.length == headers.length) {
-             $select.append($('<option></option>').val(data[1]).html(data[1]))
+             $select.append($('<option></option>').val(data[1]).html(data[0]))
          }
      }
 
