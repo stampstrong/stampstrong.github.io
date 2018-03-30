@@ -18,9 +18,28 @@
   <link rel="stylesheet" href="assets/animate.css/animate.min.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
   <script src="assets/js/map.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiY1dOLQp4TXab5OXsxD6FogmPaNFrFJw&callback=initMap">
+  </script>
 
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+     #map {
+      height: 80%;
+      width: 80%;
+      margin: auto ;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0 ;
+      padding: 0;
+    }
+  </style>
 
 </head>
 <body>
@@ -268,38 +287,11 @@
 <!--GOOGLEMAP-->
 ตำแหน่งที่เกิดเหตุกระแสไฟฟ้าขัดข้อง (Location Outage Event)
 
-<html>
-    <head>
-    <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       #map {
-        height: 80%;
-        width: 80%;
-        margin: auto ;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0 ;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
+
     <div id="map"></div>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiY1dOLQp4TXab5OXsxD6FogmPaNFrFJw&callback=initMap">
-    </script>
-  </body>
 
-</div>
-</div>
-</html>
+
 </section>
 
 
@@ -381,7 +373,7 @@
 </section>
 
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/jarallax/jarallax.js"></script>
