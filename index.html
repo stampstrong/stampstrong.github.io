@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <script src="assets/js/map.js"></script>
 
 
 </head>
@@ -290,57 +291,7 @@
   </head>
   <body>
     <div id="map"></div>
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 14.812975, lng: 100.811338},
-          zoom: 10
 
-        });
-        infoWindow = new google.maps.InfoWindow;
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-           var marker = new google.maps.Marker({
-                 map: map,
-                 anchorPoint: new google.maps.Point(0, -29)
-
-                });
-
-            map.setCenter(pos);
-            map.setZoom(16);
-            marker.setPosition(pos);
-            marker.setVisible(true);
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('ตำแหน่งเหตุการณ์กระแสไฟฟ้าขัดข้อง');
-            infoWindow.open(map,marker);
-            }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiY1dOLQp4TXab5OXsxD6FogmPaNFrFJw&callback=initMap">
     </script>
@@ -444,7 +395,7 @@
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script src="assets/js/test.js"></script>
-  <script src="assets/js/readcsv.js"></script>
+    <script src="assets/js/readcsv.js"></script>
   <script src="assets/vendors/base/vendors.bundle.js"></script>
   <script src="assets/demo/default/base/scripts.bundle.js"></script>
   <script src="assets/demo/default/custom/components/datatables/base/html-table.js"></script>
